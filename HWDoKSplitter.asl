@@ -6,17 +6,10 @@ state("DesertsOfKharak64")
 
 startup
 {
-	Action<string> DebugOutput = (text) => 
-	{
-		print("[HWDoK Autosplitter] " + text);
-	};
-	vars.DebugOutput = DebugOutput;
-	vars.DebugOutput("startup");
 }
 
 init
 {
-	vars.DebugOutput("init");
 	refreshRate = 30;
 }
 
@@ -24,8 +17,8 @@ start
 { 
 	if(old.isLoading == false && current.isLoading == true) //Epsilon Base start
 		return true;
-	else
-		return false;
+		
+	return false;
 }
 
 split
