@@ -2,11 +2,10 @@
 
 state("MassEffect2")
 {
-	bool isLoading1 : 0xE69EDC;
-	bool isLoading2 : 0xE7E070;
+	bool isLoading : "MassEffect2.exe", 0xE6B644; //Static address
 }
 
 isLoading
 {
-	return current.isLoading1 || current.isLoading2;
+	return current.isLoading;
 }
